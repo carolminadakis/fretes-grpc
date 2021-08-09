@@ -9,8 +9,12 @@ package br.com.zup;
 
 service FretesService {
   rpc send (FretesRequest) returns (FretesReply) {}
-
   rpc calculaFrete(CalculaFreteRequest) returns (CalculaFreteResponse){}
+}
+
+message ErrorDetails {
+  int32 code = 1;
+  string message = 2;
 }
 
 message CalculaFreteRequest {
